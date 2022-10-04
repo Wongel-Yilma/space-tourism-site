@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/shared/logo.svg";
 
-const Header = ({ page, setPage }) => {
+const Header = () => {
+  const [page, setPage] = React.useState("home");
   return (
     <div className="header-box">
       <div className="logo-box">
@@ -10,21 +11,37 @@ const Header = ({ page, setPage }) => {
         <div className="dash"></div>
       </div>
       <div className="header">
-        <Link className="nav__link" to="/" onClick={() => setPage(0)}>
-          00 Home
+        <Link
+          className={`nav__link ${page === "home" ? "nav__link--active" : ""}`}
+          to="/"
+          onClick={() => setPage("home")}
+        >
+          <strong>00</strong> &nbsp;Home
         </Link>
         <Link
-          className="nav__link"
+          className={`nav__link ${
+            page === "destination" ? "nav__link--active" : ""
+          }`}
           to="/destination"
-          onClick={() => setPage(1)}
+          onClick={() => setPage("destination")}
         >
-          01 Destination
+          <strong>01</strong> &nbsp;Destination
         </Link>
-        <Link className="nav__link" to="/crew" onClick={() => setPage(2)}>
-          02 Crew
+        <Link
+          className={`nav__link ${page === "crew" ? "nav__link--active" : ""}`}
+          to="/crew"
+          onClick={() => setPage("crew")}
+        >
+          <strong>02</strong> &nbsp;Crew
         </Link>
-        <Link className="nav__link" to="/technology" onClick={() => setPage(3)}>
-          03 Technology
+        <Link
+          className={`nav__link ${
+            page === "technology" ? "nav__link--active" : ""
+          }`}
+          to="/technology"
+          onClick={() => setPage("technology")}
+        >
+          <strong>03</strong> &nbsp;Technology
         </Link>
       </div>
     </div>

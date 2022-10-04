@@ -11,7 +11,32 @@ const Home = () => {
         backgroundSize: "cover",
       }}
     >
-      Home
+      HOME
+      <div className="container">
+        <div>
+          <h2 className="heading-secondary">
+            So, you want to travel to{" "}
+            <p
+              style={{
+                fontSize: "12rem",
+                display: "block",
+                color: "#fff",
+                fontFamily: "TimesNewRoman",
+                fontWeight: "300",
+              }}
+            >
+              Space
+            </p>
+          </h2>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience! Explore
+        </div>
+        <div className="container-box">
+          <button className="btn--big">Explore</button>
+        </div>
+      </div>
     </div>
   );
 };

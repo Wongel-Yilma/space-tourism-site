@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
 
 * {
    margin: 0;
@@ -9,20 +10,46 @@ html {
    font-size: 62.5%;
 }
 body {
-   font-family: sans-serif;
+   font-family: 'Manrope',sans-serif;
    font-size: 2rem;
+
 }
 
 a {
    text-decoration: none;
 }
-.root {
-   width: 100vw;
-   height: 100vh;
-   background-image: url('../starter-code/assets/home/background-home-desktop.jpg');
-   background-size: cover;
+
+:root {
+   --violet-light: rgb(217, 203, 222);
 }
 
+/*############################
+        Typography
+#############################*/
+.heading-secondary {
+   font-size: 2.8rem;
+   color: var(--violet-light);
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: 500;
+   margin-bottom: 3rem;
+}
+/*############################
+        Layout
+#############################*/
+.container {
+   margin: 0 auto;
+   margin-top: 20rem;
+   max-width: 100rem;
+   color: #fff;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+
+
+/*############################
+        Header
+#############################*/
 .header-box {
    display:flex;
    justify-content: space-between;
@@ -39,19 +66,16 @@ a {
 .header {
    display: flex;
    align-items: center;
-   gap:4rem;
+   gap:5rem;
    background-color: rgba(255, 255, 255, 0.1);
    backdrop-filter: blur(1rem);
    padding: 0 4rem;
    margin-left: -6rem;
-   font-size: 3.2rem;
+   font-size: 2.4rem;
    height: 9rem;
 
 }
-.header a:link,a:visited {
-   color:#fff;
 
-}
 .logo-box {
    display: flex;
    align-items: center;
@@ -67,6 +91,7 @@ a {
 }
 
 .nav__link {
+   color:#fff;
    display:inline-block;
    height: 9rem;
    padding-top: 2.5rem;
@@ -74,4 +99,36 @@ a {
 }
 .nav__link:hover {
    border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
+}
+.nav__link--active {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/*############################
+        Home
+#############################*/
+.container-box {
+   position: relative;
+}
+.btn--big {
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   border: none;
+   background-color: #fff;
+   color: #000;
+   height: 28rem;
+   width: 28rem;
+   font-family: 'TimesNewRoman';
+   font-size: 3.2rem;
+   border-radius: 50%;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.btn--big:hover {
+   box-shadow: 0 0 0 6rem rgba(255, 255, 255, 0.15);
 }

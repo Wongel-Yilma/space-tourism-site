@@ -7,12 +7,12 @@ import Technology from "./Technology";
 import Header from "./Header";
 
 const App = () => {
-  const [page, setPage] = React.useState(0);
+  
   return (
-    <div className="container">
+    <div>
       <BrowserRouter>
         <div>
-          <Header page={page} setPage={setPage} />
+          <Header />
           <Route path="/" exact component={Home} />
           <Route path="/destination" exact component={Destination} />
           <Route path="/crew" exact component={Crew} />
