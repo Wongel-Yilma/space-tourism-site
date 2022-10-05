@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "../images/home/background-home-desktop.jpg";
 
 const Home = () => {
@@ -11,7 +12,6 @@ const Home = () => {
         backgroundSize: "cover",
       }}
     >
-      HOME
       <div className="container">
         <div>
           <h2 className="heading-secondary">
@@ -34,7 +34,9 @@ const Home = () => {
           experience! Explore
         </div>
         <div className="container-box">
-          <button className="btn--big">Explore</button>
+          <Link to="/destination">
+            <button className="btn--big">Explore</button>
+          </Link>
         </div>
       </div>
     </div>

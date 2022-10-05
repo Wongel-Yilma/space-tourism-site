@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap');
 
 * {
    margin: 0;
@@ -8,11 +8,12 @@
 
 html {
    font-size: 62.5%;
+   font-family: inherit;
 }
 body {
    font-family: 'Manrope',sans-serif;
    font-size: 2rem;
-
+   
 }
 
 a {
@@ -21,6 +22,7 @@ a {
 
 :root {
    --violet-light: rgb(217, 203, 222);
+   font-family: 'Manrope',sans-serif;
 }
 
 /*############################
@@ -35,15 +37,35 @@ a {
    margin-bottom: 3rem;
 }
 /*############################
+        Animation
+#############################*/
+
+@keyframes zoom-in-and-out {
+   0% {
+      transform: scale(1);
+   }
+    50% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+
+/*############################
         Layout
 #############################*/
-.container {
+.container  {
    margin: 0 auto;
-   margin-top: 20rem;
+   padding-top: 20rem;
    max-width: 100rem;
    color: #fff;
    display: grid;
    grid-template-columns: repeat(2,1fr);
+   font-family: 'Manrope';
+
 }
 
 
@@ -131,4 +153,42 @@ a {
 }
 .btn--big:hover {
    box-shadow: 0 0 0 6rem rgba(255, 255, 255, 0.15);
+}
+
+
+
+/*############################
+        Destinaiton
+#############################*/
+.destination__image {
+   animation: zoom-in-and-out 3s infinite ease-in-out;
+}
+.image-box {
+   display: flex;
+flex-direction: column;
+gap: 5rem;
+align-items: center;
+}
+.nav {
+   display: flex;
+   justify-content: space-around;
+}
+.btn {
+    border: none;
+    background-color: transparent;
+    color: var(--violet-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-family: inherit;
+    border-bottom: 4px solid  rgba(255, 255, 255, 0);
+    height: 5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
+}
+.btn--active {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.8) !important;
 }
