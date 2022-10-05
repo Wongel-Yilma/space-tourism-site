@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;700&family=Manrope:wght@500;800&display=swap');
 * {
    margin: 0;
    padding: 0;
@@ -35,6 +34,13 @@ a {
    letter-spacing: 2px;
    font-weight: 500;
    margin-bottom: 3rem;
+}
+.heading-primary {
+   font-size: 12rem;
+   display: block;
+   color: #fff;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 300;
 }
 /*############################
         Animation
@@ -190,5 +196,23 @@ align-items: center;
    border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
 }
 .btn--active {
+   color: #fff;
    border-bottom: 4px solid  rgba(255, 255, 255, 0.8) !important;
+}
+
+.description {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.data-box {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.data-title {
+   color: var(--violet-light);
+   font-size: 1.4rem;
+   text-transform: uppercase;
+
 }
