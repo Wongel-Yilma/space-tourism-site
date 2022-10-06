@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;700&family=Manrope:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;700&display=swap');
 * {
    margin: 0;
    padding: 0;
@@ -10,7 +10,7 @@ html {
    font-family: inherit;
 }
 body {
-   font-family: 'Manrope',sans-serif;
+   font-family: 'Barlow Condensed',sans-serif;
    font-size: 2rem;
    
 }
@@ -18,10 +18,14 @@ body {
 a {
    text-decoration: none;
 }
+p {
+
+   font-family: 'Barlow Condensed',sans-serif;
+}
 
 :root {
    --violet-light: rgb(217, 203, 222);
-   font-family: 'Manrope',sans-serif;
+   font-family: 'Barlow Condensed',sans-serif;
 }
 
 /*############################
@@ -70,7 +74,7 @@ a {
    color: #fff;
    display: grid;
    grid-template-columns: repeat(2,1fr);
-   font-family: 'Manrope';
+   font-family: 'Barlow Condensed';
    gap: 4rem;
    align-items: center;
 }
@@ -253,4 +257,46 @@ align-items: center;
 }
 .radio-btn--active {
    background-color:#fff!important ;
+}
+
+
+/*############################
+        Technology
+#############################*/
+.technology-box {
+   display: grid;
+   grid-template-columns: 1fr 5fr;
+   gap: 3rem;
+}
+.number-box{
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+   justify-content: center;
+}
+.number{
+   border: none;
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+   font-size: 2.8rem;
+   font-family: 'Times New Roman', Times, serif;
+   border: 1px solid #fff;
+   background-color: #000;
+   color: #fff;
+   cursor: pointer;
+}
+.number-selected {
+   color: #000;
+   background-color: #fff;
+}
+.text-box {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.technology-title {
+   font-size: 6rem;
+   font-family: 'Times New Roman', Times, serif;
 }
