@@ -1,9 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/shared/logo.svg";
 
 const Header = () => {
   const [page, setPage] = React.useState("home");
+  const path = useLocation().pathname;
+
+  React.useEffect(() => {
+    switch (path) {
+      case "/":
+        setPage("home");
+        break;
+      case "/destination":
+        setPage("destination");
+        break;
+      case "/crew":
+        setPage("crew");
+        break;
+      case "/technology":
+        setPage("technology");
+        break;
+      default:
+        setPage("home");
+    }
+  }, [path]);
+
   return (
     <div className="header-box">
       <div className="logo-box">

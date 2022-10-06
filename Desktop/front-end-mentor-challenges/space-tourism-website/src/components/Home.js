@@ -1,8 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import image from "../images/home/background-home-desktop.jpg";
 
 const Home = () => {
+  let navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/destination");
+  };
   return (
     <div
       style={{
@@ -24,7 +28,9 @@ const Home = () => {
         </div>
         <div className="container-box">
           <Link to="/destination">
-            <button className="btn--big">Explore</button>
+            <button onClick={() => handleClick()} className="btn--big">
+              Explore
+            </button>
           </Link>
         </div>
       </div>

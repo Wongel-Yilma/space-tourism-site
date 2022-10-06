@@ -71,7 +71,8 @@ a {
    display: grid;
    grid-template-columns: repeat(2,1fr);
    font-family: 'Manrope';
-
+   gap: 4rem;
+   align-items: center;
 }
 
 
@@ -215,4 +216,41 @@ align-items: center;
    font-size: 1.4rem;
    text-transform: uppercase;
 
+}
+
+/*############################
+        Crew
+#############################*/
+.crew__description {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+.crew__detail {
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+}
+
+.crew__title {
+   font-size: 2.8rem;
+   color: rgba(255, 255, 255, 0.5);
+}
+.crew__name {
+   font-size: 3.6rem;
+   color: #fff;
+}
+.crew__selector {
+   display: flex;
+   gap: 2rem;
+}
+.radio-btn {
+   height: 2rem;
+   width: 2rem;
+   border-radius: 50%;
+   background-color: rgba(255,255,255,0.5);
+   cursor: pointer;
+}
+.radio-btn--active {
+   background-color:#fff!important ;
 }

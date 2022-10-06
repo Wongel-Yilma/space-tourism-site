@@ -1,7 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import image from "../images/destination/background-destination-desktop.jpg";
+
 import Moon from "../images/destination/image-moon.png";
+import Mars from "../images/destination/image-mars.png";
+import Europa from "../images/destination/image-europa.png";
+import Titan from "../images/destination/image-titan.png";
 import DestinationButton from "./DestinationButton";
 import Description from "./Description";
 
@@ -46,6 +50,26 @@ const data = {
 
 const Destination = () => {
   const [selected, setSelected] = React.useState("moon");
+  const [destinationImg, setDestinationImg] = React.useState(Moon);
+
+  React.useEffect(() => {
+    switch (selected) {
+      case "moon":
+        setDestinationImg(Moon);
+        break;
+      case "mars":
+        setDestinationImg(Mars);
+        break;
+      case "europa":
+        setDestinationImg(Europa);
+        break;
+      case "titan":
+        setDestinationImg(Titan);
+        break;
+      default:
+        setDestinationImg(Moon);
+    }
+  }, [selected]);
   return (
     <div
       style={{
@@ -69,7 +93,13 @@ const Destination = () => {
             </p>{" "}
             Pick your destination
           </h2>
-          <img className="destination__image" src={Moon} alt="destination" />
+          <Suspense fallback={<div>Loading...</div>}>
+            <img
+              className="destination__image"
+              src={destinationImg}
+              alt="destination"
+            />
+          </Suspense>
         </div>
         <div className="container-box">
           <nav className="nav">
